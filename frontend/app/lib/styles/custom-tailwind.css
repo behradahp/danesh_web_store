@@ -1,0 +1,12 @@
+@theme {
+  --color-mainBg: #f5f8ff;
+  --color-primary: #384461;
+  --color-secondary: #768ebc;
+  --color-success: #10673d;
+  --color-success-light: #d3fde9;
+  --color-error: #e97d7b;
+  --color-error-light: #fee4d9;
+  --color-info: #405d94;
+  --color-info-light: #e0eff8;
+  --shadow-header: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
