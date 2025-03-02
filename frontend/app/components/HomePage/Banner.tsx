@@ -5,7 +5,7 @@ import Button from "@/app/components/Common/Button";
 
 // Images & Icons
 import bannerImage from "@/app/assets/images/home-banner.png";
-import arrowIcon from "@/app/assets/icons/common/arrow-icon.svg";
+import arrowIcon from "@/app/assets/icons/common/banner-arrow-icon.svg";
 import Link from "next/link";
 
 function HomeBanner() {
@@ -24,6 +24,7 @@ function HomeBanner() {
         <Button
           text='مشاهده و خرید'
           buttonStyles='absolute top-[80%] left-[25%] bg-white py-1 px-5'
+          textStyles='text-[14px]'
           endIcon={
             <Image src={arrowIcon} alt='arrow icon' width={40} height={40} />
           }

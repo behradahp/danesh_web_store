@@ -16,7 +16,7 @@ function CompareBanner() {
           <Button
             text='شروع مقایسه'
             buttonStyles='bg-secondary min-h-full'
-            textStyles='text-mainBg'
+            textStyles='text-mainBg text-[14px]'
             startIcon={
               <Image src={compareIcon} alt='Compare' width={27} height={27} />
             }

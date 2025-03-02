@@ -18,7 +18,7 @@ function HeaderInfo() {
         <Button
           text='ورود/ثبت نام'
           buttonStyles='bg-secondary'
-          textStyles='text-white'
+          textStyles='text-white text-[14px]'
           startIcon={
             <Image src={authIcon} alt='Login Icon' width={25} height={25} />
           }

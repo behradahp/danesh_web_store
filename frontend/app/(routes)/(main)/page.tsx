@@ -1,7 +1,7 @@
 // Components
 import HomeBanner from "@/app/components/HomePage/Banner";
 import ShopServices from "@/app/components/HomePage/ShopServices";
-import TopProducts from "@/app/components/HomePage/TopProducts";
+import TopProducts from "@/app/components/HomePage/TopProducts/TopProducts";
 
 function HomePage() {
   return (

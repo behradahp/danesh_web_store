@@ -17,7 +17,7 @@ function HeaderSearch() {
         startIcon={
           <Image src={filterIcon} alt='Search Icon' width={20} height={20} />
         }
-        buttonStyles='bg-white'
+        buttonStyles='bg-white text-[14px]'
       />
 
       <input type='text' className='flex-grow outline-0' />

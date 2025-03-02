@@ -25,7 +25,7 @@ function Button({
       onClick={onClick}
     >
       {startIcon}
-      <span className={`text-[14px] font-[500] ${textStyles}`}>{text}</span>
+      <span className={`font-[500] ${textStyles}`}>{text}</span>
       {endIcon}
     </button>
   );

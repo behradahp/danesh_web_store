@@ -16,7 +16,7 @@ function PageLinks() {
       <Button
         text='دسته بندی ها'
         buttonStyles='bg-primary'
-        textStyles='text-mainBg'
+        textStyles='text-mainBg text-[14px]'
         startIcon={<Image src={menuIcon} alt='Menu' width={30} height={30} />}
       />
 
