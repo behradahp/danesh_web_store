@@ -1,13 +1,14 @@
 "use client";
+import { useStore } from "@/app/lib/store/store";
 
 // Components
 import Badge from "@/app/components/Common/Badge";
+import MobileMenu from "./MobileMenu";
 
 // Icons
 import basketIcon from "@/app/assets/icons/header-icons/basket-icon.svg";
 import savedIcon from "@/app/assets/icons/header-icons/saved-icon.svg";
-import likedIcon from "@/app/assets/icons/header-icons/liked-icon.svg";
-import { useStore } from "@/app/lib/store/store";
+// import likedIcon from "@/app/assets/icons/header-icons/liked-icon.svg";
 
 function InfoButtons() {
   const { store } = useStore();
@@ -18,18 +19,18 @@ function InfoButtons() {
         <Badge
           bgColor='bg-info-light'
           icon={basketIcon}
-          size={40}
           count={store.basket.length}
           badgeColor='bg-info'
+          className='lg:w-[40px] lg:h-[40px]'
         />
       </button>
       <button className='cursor-pointer'>
         <Badge
           bgColor='bg-success-light'
           icon={savedIcon}
-          size={40}
           count={store.saved.length}
           badgeColor='bg-success'
+          className='lg:w-[40px] lg:h-[40px]'
         />
       </button>
       {/* <button className='cursor-pointer'>
@@ -41,6 +42,8 @@ function InfoButtons() {
           badgeColor='bg-error'
         />
       </button> */}
+
+      <MobileMenu />
     </>
   );
 }

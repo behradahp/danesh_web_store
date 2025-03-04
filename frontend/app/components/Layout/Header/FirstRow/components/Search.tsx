@@ -11,7 +11,7 @@ import searchIcon from "@/app/assets/icons/common/search-icon.svg";
 
 function HeaderSearch() {
   return (
-    <div className='w-[500px] h-[100%] flex gap-2 rounded-lg bg-mainBg p-2'>
+    <div className='w-[500px] h-[100%] hidden lg:flex gap-2 rounded-lg bg-mainBg p-2'>
       <Button
         text='فیلتر محصولات'
         startIcon={

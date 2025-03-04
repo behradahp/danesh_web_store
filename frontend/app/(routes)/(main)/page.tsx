@@ -5,7 +5,7 @@ import TopProducts from "@/app/components/HomePage/TopProducts/TopProducts";
 
 function HomePage() {
   return (
-    <main className='px-7'>
+    <main className='p-2 lg:px-7'>
       <HomeBanner />
       <ShopServices />
       <TopProducts />

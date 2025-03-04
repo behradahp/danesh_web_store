@@ -51,7 +51,7 @@ function LoginForm() {
         loginFC();
       }}
     >
-      <span className='text-[40px] text-mainBg font-[600] mb-13'>
+      <span className='text-[40px] text-mainBg font-[600] mb-5 lg:mb-13'>
         صفحه ورود
       </span>
       <input

@@ -4,23 +4,30 @@ interface IBadgeProps {
   bgColor: string;
   badgeColor: string;
   icon: string;
-  size: number;
+  size?: "small" | "medium" | "large";
   count: number;
   showOnZero?: boolean;
+  className?: string;
 }
 
 function Badge({
   icon,
   bgColor,
-  size,
+  size = "medium",
   badgeColor,
   count,
   showOnZero,
+  className,
 }: IBadgeProps) {
   return (
     <div
-      className={`relative flex justify-center items-center ${bgColor} rounded-[10px]`}
-      style={{ width: size, height: size }}
+      className={`relative flex justify-center items-center ${
+        size === "small"
+          ? "w-[25px] h-[25px]"
+          : size === "medium"
+          ? "w-[35px] h-[35px]"
+          : "w-[40px] h-[40px]"
+      } ${bgColor} rounded-[10px] ${className}`}
     >
       <Image
         src={icon}

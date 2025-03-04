@@ -8,9 +8,16 @@ import loginVector from "@/app/assets/images/login-vector.png";
 
 function LoginPage() {
   return (
-    <div className='flex-grow flex justify-center items-center gap-20'>
+    <div className='flex-grow flex flex-col-reverse lg:flex-row justify-center items-center gap-5 lg:gap-20'>
       <LoginForm />
-      <Image src={loginVector} alt='Vector Login' width={300} height={300} />
+      <Image
+        src={loginVector}
+        alt='Vector Login'
+        width={0}
+        height={0}
+        sizes='100vw'
+        className='w-[250px] h-[250px] lg:w-[300px] lg:h-[300px]'
+      />
     </div>
   );
 }

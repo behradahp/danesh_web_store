@@ -10,7 +10,7 @@ const bgCircleEffects = {
 };
 function ShopServices() {
   return (
-    <section className='w-full flex justify-between my-16'>
+    <section className='w-full hidden lg:flex justify-between my-16'>
       {shopServices.map((service) => {
         return (
           <div key={service.title} className='flex items-center gap-2'>

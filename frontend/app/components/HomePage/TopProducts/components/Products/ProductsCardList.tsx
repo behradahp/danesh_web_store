@@ -71,7 +71,7 @@ function ProductsCardList({ products }: { products: Product[] }) {
   return (
     <div className='w-full flex justify-between items-center gap-3 px-5'>
       {buttonDisabled.prev ? (
-        <div className='w-[40px] h-[40px]'></div>
+        <div className='w-[90px] h-[90px]'></div>
       ) : (
         <button
           className='flex-shrink-0 cursor-pointer'
@@ -88,7 +88,7 @@ function ProductsCardList({ products }: { products: Product[] }) {
       />
 
       {buttonDisabled.next ? (
-        <div className='w-[40px] h-[40px]'></div>
+        <div className='w-[90px] h-[90px]'></div>
       ) : (
         <button
           className='flex-shrink-0 cursor-pointer'

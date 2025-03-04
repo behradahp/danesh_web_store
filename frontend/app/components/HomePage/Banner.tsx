@@ -23,10 +23,17 @@ function HomeBanner() {
       <Link href='/products'>
         <Button
           text='مشاهده و خرید'
-          buttonStyles='absolute top-[80%] left-[25%] bg-white py-1 px-5'
-          textStyles='text-[14px]'
+          buttonStyles='absolute top-[80%] left-[25%] bg-white py-1 lg:px-5'
+          textStyles='text-[10px] lg:text-[14px]'
           endIcon={
-            <Image src={arrowIcon} alt='arrow icon' width={40} height={40} />
+            <Image
+              src={arrowIcon}
+              alt='arrow icon'
+              width={0}
+              height={0}
+              sizes='100vw'
+              className='w-[20px] h-[20px] lg:w-[40px] lg:h-[40px]'
+            />
           }
         />
       </Link>

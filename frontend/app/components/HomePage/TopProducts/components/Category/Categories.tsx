@@ -80,7 +80,7 @@ function TopProductsCategories({ products }: { products: Product[] }) {
 
   return (
     <>
-      <div className='w-full flex justify-center items-center gap-5 my-7'>
+      <div className='w-full min-h-max p-2 overflow-x-auto flex lg:justify-center items-center gap-5 my-7'>
         {categories.map((category) => {
           return (
             <div key={category.id}>

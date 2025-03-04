@@ -4,7 +4,7 @@ import HeaderSecondRow from "./SecondRow/SecondRow";
 
 function Header() {
   return (
-    <header className='flex flex-col gap-4 p-7'>
+    <header className='flex flex-col gap-4 p-2 lg:p-7'>
       <HeaderFirstRow />
       <HeaderSecondRow />
     </header>
