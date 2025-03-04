@@ -62,6 +62,14 @@ class UserAPI(viewsets.ViewSet):
             return Response(UserSerializer(user, many=False, read_only=True).data)
 
     @staticmethod
+    def get_panel_url(request):
+        if request.user.username is "":
+            raise PermissionDenied
+        if not request.user.is_superuser:
+            return Response({"url": "/user-panel"})
+        return Response({"url": "/admin-panel"})
+    
+    @staticmethod
     def get_all_users(request):
         if not request.user.is_superuser:
             raise PermissionDenied

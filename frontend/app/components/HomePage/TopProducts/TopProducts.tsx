@@ -9,20 +9,20 @@ async function TopProducts() {
   const data: Product[] = await res.json();
 
   return (
-    <section className='flex flex-col items-center mb-20'>
+    <section className='flex flex-col items-center mb-2'>
       <span className='text-[34px] text-primary font-[500]'>
         محصولی که میخوای اینجاست!
       </span>
 
       {/* Full Part */}
-      <div className='w-full'>
+      <div className='w-full '>
         {/* Background Part */}
         <div className='relative w-full h-[400px] flex flex-col items-center bg-[#dce6ff] rounded-b-[15px] rounded-t-[50px] overflow-hidden'>
           <div className='absolute top-[-1960px] w-[2830px] h-[2000px] bg-mainBg rounded-full'></div>
         </div>
 
         {/* Content Part */}
-        <div className='relative top-[-330px] w-full flex flex-col items-center'>
+        <div className='relative top-[-330px] w-full max-h-[250px] flex flex-col items-center'>
           <span className='text-[24px] text-primary font-[300]'>
             میتونی هر دسته بندی که میخوای رو انتخاب کنی تا محصول مورد نظرتو پیدا
             کنی.

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Component
-import ProductCard from "@/app/components/Common/ProductCard";
+import ProductCard from "@/app/components/Common/ProductCard/ProductCard";
 
 interface IProductCardSliderProps {
   products: Product[];

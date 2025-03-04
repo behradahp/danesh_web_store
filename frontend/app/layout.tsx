@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/app/components/Layout/Header/Header";
+import NextTopLoader from "nextjs-toploader";
+
+import ClientProviderLayout from "./components/Layout/ClientProviderLayout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +20,8 @@ export default function RootLayout({
         <link rel='shortcut icon' href='./favicon.svg' type='image/x-icon' />
       </head>
       <body>
-        <div className='w-full h-[100vh] flex flex-col'>
-          <Header />
-          {children}
-        </div>
+        <NextTopLoader color='#768ebc' />
+        <ClientProviderLayout>{children}</ClientProviderLayout>
       </body>
     </html>
   );

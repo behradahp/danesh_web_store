@@ -11,6 +11,5 @@ urlpatterns = [
     path('change_user_info/', UserAPI.as_view({"put": "change_user_info"}), name='change_user_info'),
     path('add_to_favorit/<int:product_id>', UserAPI.as_view({"get": "add_favorite", "delete": "remove_favorite"}), name='favorite'),
     path('get_all_users/', UserAPI.as_view({"get": "get_all_users"}), name='get_all_users'),
-
-
+    path('get_panel_url/', UserAPI.as_view({"get": "get_panel_url"}), name='get_panel_url'),
 ]

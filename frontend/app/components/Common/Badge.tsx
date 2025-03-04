@@ -6,9 +6,17 @@ interface IBadgeProps {
   icon: string;
   size: number;
   count: number;
+  showOnZero?: boolean;
 }
 
-function Badge({ icon, bgColor, size, badgeColor, count }: IBadgeProps) {
+function Badge({
+  icon,
+  bgColor,
+  size,
+  badgeColor,
+  count,
+  showOnZero,
+}: IBadgeProps) {
   return (
     <div
       className={`relative flex justify-center items-center ${bgColor} rounded-[10px]`}
@@ -23,13 +31,15 @@ function Badge({ icon, bgColor, size, badgeColor, count }: IBadgeProps) {
         style={{ width: "60%", height: "60%" }}
       />
 
-      <div
-        className={`absolute top-[-6px] right-[-6px] w-[40%] h-[40%] flex justify-center items-center ${badgeColor} rounded-full`}
-      >
-        <span className='relative top-[1px] left-[1px] text-[11px] text-white'>
-          {count.toLocaleString("fa")}
-        </span>
-      </div>
+      {showOnZero || count != 0 ? (
+        <div
+          className={`absolute top-[-6px] right-[-6px] w-[40%] h-[40%] flex justify-center items-center ${badgeColor} rounded-full`}
+        >
+          <span className='relative top-[1px] left-[1px] text-[11px] text-white'>
+            {count.toLocaleString("fa")}
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 }
