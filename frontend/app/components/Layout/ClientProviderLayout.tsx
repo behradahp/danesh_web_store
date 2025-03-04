@@ -1,5 +1,6 @@
 "use client";
 
+import { ConfigedToastContainer } from "@/app/lib/config/toast";
 import { StoreProvider } from "@/app/lib/store/store-provider";
 import { JSX, useEffect } from "react";
 
@@ -19,7 +20,12 @@ function ClientProviderLayout({
 
     return () => window.removeEventListener("beforeunload", logoutWhenLeave);
   }, []);
-  return <StoreProvider>{children}</StoreProvider>;
+  return (
+    <StoreProvider>
+      <ConfigedToastContainer />
+      {children}
+    </StoreProvider>
+  );
 }
 
 export default ClientProviderLayout;

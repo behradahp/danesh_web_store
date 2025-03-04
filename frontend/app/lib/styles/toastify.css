@@ -1,0 +1,15 @@
+.custom-toast .Toastify__progress-bar--wrp {
+  width: 90%;
+  margin-left: 5%;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 10px;
+  direction: rtl;
+}
+.custom-toast .Toastify__progress-bar--bg {
+  background: none;
+}
+.custom-toast .Toastify__progress-bar {
+  border-radius: 10px;
+  transform-origin: right;
+}

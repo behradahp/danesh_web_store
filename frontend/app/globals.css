@@ -1,3 +1,4 @@
 @import "tailwindcss";
 @import "./lib/styles/fonts.css";
 @import "./lib/styles/custom-tailwind.css";
+@import "./lib/styles/toastify.css";

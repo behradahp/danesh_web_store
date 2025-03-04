@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { SyncLoader } from "react-spinners";
 
 // Components
 import Button from "@/app/components/Common/Button";
+import { myToast } from "@/app/lib/config/toast";
 
 // Context
 import { useStore } from "@/app/lib/store/store";
@@ -24,8 +26,11 @@ function LoginForm() {
     password: "",
   });
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const loginFC = async () => {
-    fetch("/api/login", {
+    setIsLoading(true);
+    await fetch("/api/login", {
       method: "POST",
       body: JSON.stringify(loginData),
       headers: { "Content-Type": "application/json" },
@@ -38,9 +43,11 @@ function LoginForm() {
       .then((data) => {
         if (data) {
           dispatch({ type: AuthActionTypes.Login, payload: data.userInfo });
+          myToast.success("ورود موفقیت آمیز بود");
           navigate.push("/");
-        }
+        } else myToast.error("نام کاربری یا رمز عبور اشتباه است");
       });
+    setIsLoading(false);
   };
 
   return (
@@ -69,8 +76,9 @@ function LoginForm() {
         }
       />
       <Button
-        text='ورود'
-        buttonStyles='bg-info w-full justify-center'
+        text={isLoading ? "" : "ورود"}
+        element={isLoading ? <SyncLoader color='white' size={10} /> : undefined}
+        buttonStyles={`bg-info w-full justify-center py-4`}
         textStyles='text-white'
       />
     </form>

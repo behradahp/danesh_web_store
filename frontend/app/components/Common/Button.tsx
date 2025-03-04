@@ -4,6 +4,7 @@ import { JSX } from "react";
 
 interface IButtonProps {
   text: string;
+  element?: JSX.Element;
   textStyles?: string;
   startIcon?: JSX.Element;
   endIcon?: JSX.Element;
@@ -13,6 +14,7 @@ interface IButtonProps {
 
 function Button({
   text,
+  element,
   textStyles,
   startIcon,
   endIcon,
@@ -25,6 +27,7 @@ function Button({
       onClick={onClick}
     >
       {startIcon}
+      {element}
       <span className={`font-[500] ${textStyles}`}>{text}</span>
       {endIcon}
     </button>
