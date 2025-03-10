@@ -1,6 +1,6 @@
 // Components
-import AdminPanelHeader from "@/app/components/AdminLayout/Header/Header";
-import AdminPanelSideMenu from "@/app/components/AdminLayout/SideMenu/SideMenu";
+import AdminPanelHeader from "@/app/components/AdminPage/AdminLayout/Header/Header";
+import AdminPanelSideMenu from "@/app/components/AdminPage/AdminLayout/SideMenu/SideMenu";
 
 function AdminPanelLayout({
   children,

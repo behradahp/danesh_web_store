@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 // Icon
@@ -9,6 +12,8 @@ import { adminLinks } from "@/app/lib/constants/admin-links";
 import Link from "next/link";
 
 function AdminPanelSideMenu() {
+  const path = usePathname();
+
   return (
     <section className='flex-shrink-0 w-[300px] h-full bg-white shadow-header rounded-[15px] p-2 ml-2'>
       {/* Shop Icon */}
@@ -38,7 +43,9 @@ function AdminPanelSideMenu() {
           return (
             <div
               key={item.title}
-              className='relative flex items-center gap-2 p-3 rounded-md'
+              className={`relative flex items-center gap-2 p-3 rounded-md ${
+                path === item.href ? "bg-info-light" : ""
+              }`}
             >
               <Image src={item.icon} alt='icon' width={30} height={30} />
               <span>{item.title}</span>

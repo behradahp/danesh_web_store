@@ -42,11 +42,11 @@ function AdminPanelHeader() {
               width={0}
               height={0}
               sizes='100vw'
-              className='w-[30px] h-[30px]'
+              className='w-[25px] h-[25px]'
             />
           }
-          buttonStyles='bg-secondary'
-          textStyles='text-mainBg'
+          buttonStyles='border border-secondary'
+          textStyles='text-[14px] text-primary'
         />
       </Link>
     </section>
